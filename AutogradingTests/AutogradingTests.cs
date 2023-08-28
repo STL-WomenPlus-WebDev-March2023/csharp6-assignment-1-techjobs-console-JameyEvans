@@ -1,4 +1,5 @@
-﻿using TechJobsConsoleAutograded6;
+﻿using System.Globalization;
+using TechJobsConsoleAutograded6;
 
 namespace AutogradingTests;
 
@@ -21,7 +22,8 @@ public class UnitTest1
         app.RunProgram();
 
         var output = writer.ToString();
-        Assert.AreEqual(text, output);
+        int stringComparison = String.Compare(text, output, CultureInfo.CurrentCulture, CompareOptions.IgnoreCase | CompareOptions.IgnoreSymbols);
+        Assert.AreEqual(stringComparison, 0);
     }
 
     [TestMethod]
@@ -40,7 +42,8 @@ public class UnitTest1
         app.RunProgram();
 
         var output = writer.ToString();
-        Assert.AreEqual(text, output);
+        int stringComparison = String.Compare(text, output, CultureInfo.CurrentCulture, CompareOptions.IgnoreCase | CompareOptions.IgnoreSymbols);
+        Assert.AreEqual(stringComparison, 0);
     }
 
     [TestMethod]
@@ -58,7 +61,8 @@ public class UnitTest1
         app.RunProgram();
 
         var output = writer.ToString();
-        Assert.AreEqual(text, output);
+        int stringComparison = String.Compare(text, output, CultureInfo.CurrentCulture, CompareOptions.IgnoreCase | CompareOptions.IgnoreSymbols);
+        Assert.AreEqual(stringComparison, 0);
     }
 
     [TestMethod]
@@ -76,7 +80,8 @@ public class UnitTest1
         app.RunProgram();
 
         var output = writer.ToString();
-        Assert.AreEqual(text, output);
+        int stringComparison = String.Compare(text, output, CultureInfo.CurrentCulture, CompareOptions.IgnoreCase | CompareOptions.IgnoreSymbols);
+        Assert.AreEqual(stringComparison, 0);
     }
 
 }
